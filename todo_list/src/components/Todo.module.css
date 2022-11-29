@@ -1,0 +1,132 @@
+.todo {
+    display: grid;
+    grid-template-columns: 22px 1fr 35px;
+    grid-template-rows: 1fr 1rem;
+    gap: 1rem;
+    grid-template-areas: 
+    'checkbox text deleteBtn'
+    'checkbox date deleteBtn';
+    align-items: start;
+    font-size: 0.875rem;
+    background-color: var(--gray-500);
+    color: var(--gray-100);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.taskDoneText {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+/* -------------------------------------------
+                Styling Checkbox
+------------------------------------------- */
+.checkboxContainer {
+    position: relative;
+    display: block;
+    width: 22px;
+    grid-area: checkbox;
+    cursor: pointer;
+}
+
+.checkboxContainer > input {
+    width: 100%;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+
+    transition: border-color 200ms, background-color 200ms;
+}
+
+.checkmark::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--gray-100);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+
+    transition: opacity 200ms;
+}
+
+/* Styling Hover and Checked States (both have the same style) */
+@media screen and (min-width: 1000px) {
+    .checkboxContainer:hover > input:not(:checked) ~ .checkmark  {
+        background-color: var(--blue-dark);
+        opacity: 0.8;
+    }
+
+    .checkboxContainer:hover > input:checked ~ .checkmark  {
+        background-color: var(--purple);
+        border-color: var(--purple);
+    }
+    
+    .checkboxContainer:hover > input:checked ~ .checkmark::before {
+        opacity: 1;
+    }
+}
+
+.checkboxContainer > input:checked ~ .checkmark  {
+    background-color: var(--purple-dark);
+    border-color: var(--purple-dark);
+}
+
+.checkboxContainer > input:checked ~ .checkmark::before {
+    opacity: 1;
+}
+
+/* -------------------------------------------
+              Styling Delete Button
+------------------------------------------- */
+.todo > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: deleteBtn;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 8px;
+
+    transition: background-color 250ms, color 250ms;
+}
+
+.todo > button:hover {
+    background-color: var(--gray-400);
+    color: var(--danger);
+}
+
+/* -------------------------------------------
+                Styling time tag
+------------------------------------------- */
+.todo > time {
+    grid-area: date;
+    align-self: end;
+}
+
+.todo > button,
+.todo > time {
+    color: var(--gray-300);
+}
+
+/* Fixing delete button and checkbox appearing higher than the text */
+.checkboxContainer {
+    margin-top: 0.2rem;
+}

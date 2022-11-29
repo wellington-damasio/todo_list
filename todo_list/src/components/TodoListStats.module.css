@@ -1,0 +1,15 @@
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.125rem .5rem;
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    border-radius: 999px;
+}

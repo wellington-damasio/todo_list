@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 2.5rem 2rem;
+    background-color: var(--gray-700);
+    margin-bottom: -1.4rem;
+}
+
+@media screen and (min-width: 700px) {
+    .header {
+        padding: 4.5rem 2rem 5rem 2rem;
+    }
+}

@@ -1,0 +1,51 @@
+.todoInput {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.todoInput > input {
+    width: 100%;
+    height: 2.75rem;
+    padding: 1rem;
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    background-color: var(--gray-500);
+    color: var(--gray-300);
+}
+
+.todoInput > input:focus {
+    color: var(--gray-100);
+}
+
+.todoInput > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+    border: none;     
+    border-radius: 8px;
+    padding-inline: 1.125rem;
+    height: 2.75rem;
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+    cursor: pointer;
+
+    transition: background-color 200ms;
+}
+
+.todoInput > button:hover {
+    background-color: var(--blue);
+}
+
+@media screen and (min-width: 700px) {
+    .todoInput > input {
+        height: 3.75rem;
+    }
+
+    .todoInput > button {
+        height: 3.75rem;
+    }
+}
