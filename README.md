@@ -7,6 +7,15 @@ Users should be able to:
 - Add new tasks
 - Delete specific tasks
 
+Tecnologies I'm using:
+- CSS Modules
+- React.js
+- TypeScript
+
+Libraries:
+- Phosphor Icons
+- date-fns (for better formatting dates)
+
 ## Things I want to add to this project
 The best way to learn is to make projects yourself (as I'm doing now 🙃) and to try to add cool features to those projects.
 
