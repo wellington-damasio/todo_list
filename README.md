@@ -1,4 +1,5 @@
 # Todo List
+![](https://github.com/wellington-damasio/todo_list/screenshots/screenshot1.png)
 ## About the project 💻
 This is a challenge from the first chapter of Rocketseat's Ignite classes.
 
