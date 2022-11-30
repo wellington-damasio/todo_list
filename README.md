@@ -23,6 +23,7 @@ Some features I want to add are:
 - ~~Tasks go to the bottom of the list when completed~~
 - Drag-and-drop functionality
 - Hide tasks that are already done
+- Change favicon and title of the website
 
 ## Difficulties I faced 🤷‍♂️
 ### TypeScript <img align="center" alt="ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg">
