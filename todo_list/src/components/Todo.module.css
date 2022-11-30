@@ -72,22 +72,22 @@
         opacity: 0.8;
     }
 
-    .checkboxContainer:hover > input:checked ~ .checkmark  {
+    .checked.checkboxContainer:hover > input ~ .checkmark  {
         background-color: var(--purple);
         border-color: var(--purple);
     }
     
-    .checkboxContainer:hover > input:checked ~ .checkmark::before {
+    .checked.checkboxContainer:hover > input:checked ~ .checkmark::before {
         opacity: 1;
     }
 }
 
-.checkboxContainer > input:checked ~ .checkmark  {
+.checked.checkboxContainer > input ~ .checkmark  {
     background-color: var(--purple-dark);
     border-color: var(--purple-dark);
 }
 
-.checkboxContainer > input:checked ~ .checkmark::before {
+.checked.checkboxContainer > input ~ .checkmark::before {
     opacity: 1;
 }
 

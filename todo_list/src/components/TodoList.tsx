@@ -13,15 +13,19 @@ type Task = {
 
 type TodoListProps = {
     tasks: Task[]
+    deleteTaskFunc: (id :number) => void
+    taskDoneFunc: (id: number, newTask : Task) => void
 }
 
 const TodoList = (props: TodoListProps) => {
     const todos: Task[] = props.tasks
+    const {deleteTaskFunc, taskDoneFunc} = props
+
 
     return(
         <div className={styles.todoList}>
             {todos.length > 0 ? (
-                todos.map(todo => {
+                todos.map((todo: any) => {
                     return(
                         <Todo 
                             key={todo.id}
@@ -29,6 +33,8 @@ const TodoList = (props: TodoListProps) => {
                             textContent={todo.text_content}
                             isDone={todo.isDone}
                             createdAt={todo.createdAt}
+                            deleteTaskFunc={deleteTaskFunc}
+                            taskDoneFunc={taskDoneFunc}
                         />
                     )
                 })
